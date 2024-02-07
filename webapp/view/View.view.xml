@@ -1,0 +1,40 @@
+<mvc:View 
+    controllerName="sample.controller.View"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content>
+            <Table id="idProductsTable"
+                width="70%"
+                inset="false"
+                items="{viewModel>/company}">
+                <infoToolbar>
+                    <OverflowToolbar>
+                        <Label text="Example of /sap/opu/odata/SAP/ZGWDMW00010_SRV/F4_COMPANY"/>
+                    </OverflowToolbar>
+                </infoToolbar>
+                <columns>
+                    <Column
+                        hAlign="Center">
+                        <Text text="CODE" />
+                    </Column>
+                    <Column
+                        hAlign="Center">
+                        <Text text="NAME" />
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem vAlign="Middle">
+                        <cells>
+                            <Text
+                                text="{viewModel>code}" />
+                            <Text
+                                text="{viewModel>name}" />  
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
+    </Page>
+</mvc:View>
